@@ -1,0 +1,9 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="pending" date="1427369215" format="1.1" version="24"}%
+<verbatim>
+	%STARTSECTION{name="users"}%{"results":[%QUERYUSERS{format="{\"id\":\"$wikiName\",\"text\":\"$percentQUERY{\"'Main.$wikiName'/FirstName\"}$percent $percentQUERY{\"'Main.$wikiName'/LastName\"}$percent\"}"}%]}%ENDSECTION{name="users"}%
+	
+	%STARTSECTION{name="users_init"}%{"id":"%URLPARAM{"id"}%", "text":"%QUERY{"'Main.%URLPARAM{"id"}%'/FirstName"}% %QUERY{"'Main.%URLPARAM{"id"}%'/LastName"}%"}%ENDSECTION{name="users_init"}%
+
+	%STARTSECTION{name="users_display"}%%QUERY{"'Main.%id%'/FirstName"}% %QUERY{"'Main.%id%'/LastName"}%%ENDSECTION{name="users_display"}%
+</verbatim>
+
