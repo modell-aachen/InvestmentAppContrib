@@ -11,7 +11,7 @@
 		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Freigabe" status="FREIGABE"}%
 		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Bestellung" status="BESTELLUNG"}%
 		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Warenannahme" status="WARENANNAHME"}%
-		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Uebergabe" status="UEBERGABE"}%
+		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Übergabe" status="UEBERGABE"}%
 		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="abgelehnte Anträge" status="ABGELEHNT"}%
 		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="abgeschlossene Anträge" status="ABGESCHLOSSEN"}%
 	%ENDTABPANE%
