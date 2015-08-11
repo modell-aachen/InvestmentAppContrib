@@ -5,5 +5,7 @@
 	%STARTSECTION{name="users_init"}%{"id":"%URLPARAM{"id"}%", "text":"%QUERY{"'Main.%URLPARAM{"id"}%'/FirstName"}% %QUERY{"'Main.%URLPARAM{"id"}%'/LastName"}%"}%ENDSECTION{name="users_init"}%
 
 	%STARTSECTION{name="users_display"}%%QUERY{"'Main.%id%'/FirstName"}% %QUERY{"'Main.%id%'/LastName"}%%ENDSECTION{name="users_display"}%
+
+	%STARTSECTION{name="fuehrung"}%{"results":[%GROUPINFO{"FuehrungkraefteGroup" format="{\"id\":\"$username\", \"text\":\"$username\"}"}%]}%ENDSECTION{name="fuehrung"}%
 </verbatim>
 
