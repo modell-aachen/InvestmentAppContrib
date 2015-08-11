@@ -1,0 +1,55 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1398169035" format="1.1" reprev="2" version="2"}%
+%META:TOPICPARENT{name="WebHome"}%
+%TMPL:INCLUDE{"view"}%
+
+%TMPL:DEF{"content"}%
+	%TABPANE{class="simple"}%	
+		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Antragsstellung" status="ANTRAGSSTELLUNG"}%
+		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Vorprüfung" status="VORPRUEFUNG"}%
+		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Preisermittlung" status="PREISERMITTLUNG"}%
+		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Prüfung" status="PRUEFUNG"}%
+		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Freigabe" status="FREIGABE"}%
+		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Bestellung" status="BESTELLUNG"}%
+		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Warenannahme" status="WARENANNAHME"}%
+		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Uebergabe" status="UEBERGABE"}%
+		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="abgelehnte Anträge" status="ABGELEHNT"}%
+		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="abgeschlossene Anträge" status="ABGESCHLOSSEN"}%
+	%ENDTABPANE%
+%TMPL:END% 
+
+%STARTSECTION{name="tab_antraege"}%%TAB{"%title%" url="%SCRIPTURLPATH{"rest"}%/RenderPlugin/tag?name=INCLUDE;param=%WEB%.WebHomeViewTemplate;section=suche_antraege;status=%status%"}%%ENDTAB%%ENDSECTION{name="tab_antraege"}%
+
+<!--
+%STARTSECTION{name="suche_antraege"}%
+	<table class="tablesorter">
+		<thead>
+			<tr>
+				<th class="header">Antragsnr.</th>
+				<th class="header">Antragssteller</th>
+				<th class="header">Fachbereich</th>
+				<th class="header">Produktbeschr.</th>
+				<th class="header">Antragsdatum</th>
+			</tr>
+		</thead>
+		<tbody>
+		%SOLRSEARCH{
+			"form:*InvestmentForm process_state_s:%status%"
+			fields="web, topic, field_Antragsnummer_s, field_Antragsteller_s, field_Fachbereich_s, field_Produktbeschreibung_s, field_Antragsdatum_dt, author"
+			header=""
+			format="
+				<tr>
+					<td><a href=\"%SCRIPTURL{view}%/$web/$topic\" title=\"$topic\">$topic</a></td>
+					<td>$field_Antragsteller_s</td>
+					<td>$field_Fachbereich_s</td>
+					<td>$field_Produktbeschreibung_s</td>
+					<td>$field_Antragsdatum_dt</td>
+				</tr>"
+			footer=""
+			rows="99999"
+			sort="topic asc"
+		}%
+		</tbody>
+	</table>
+%ENDSECTION{name="suche_antraege"}%
+-->
+
