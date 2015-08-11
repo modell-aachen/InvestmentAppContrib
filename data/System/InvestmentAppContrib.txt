@@ -1,0 +1,20 @@
+---+!! InvestmentAppContrib
+
+---++ Info
+
+Many thanks to the following sponsors for supporting this work:
+   * Acknowledge any sponsors here
+
+|  Author(s): | |
+|  Home: | http://www.modell-aachen.de |
+|  Support: | http://www.modell-aachen.de |
+|  Copyright: | © |
+|  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
+|  Release: | |
+|  Version: | |
+|  Change History: | <!-- versions below in reverse order --> |
+|  Dependencies: | |
+|  Home page: | |
+|  Support: | |
+<!-- Do _not_ attempt to edit this topic; it is auto-generated. -->
+
