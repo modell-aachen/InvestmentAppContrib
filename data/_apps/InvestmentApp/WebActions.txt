@@ -1,0 +1,4 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1436446396" format="1.1" version="8"}%
+%META:TOPICPARENT{name="Templates"}%
+
+   * <a href="%SCRIPTURLPATH{"edit"}%/%BASEWEB%/InvestmentAUTOINC000?template=%WEB%.InvestmentEdit;templatetopic=%WEB%.InvestmentTemplate;formtemplate=InvestmentForm;t=%GMTIME{$epoch}%">%MAKETEXT{"new investment proposal"}%</a>
