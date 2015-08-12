@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="GiselaGeheim" comment="pending" date="1439310019" format="1.1" version="3"}%
+%META:TOPICINFO{author="KevinAlleine" comment="pending" date="1439367522" format="1.1" version="6"}%
 %STARTSECTION{name="freigabe_section_1_edit"}%
 	<tr>
 		<td>Antragsteller%RED% *%ENDCOLOR%</td>
@@ -130,11 +130,9 @@
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="VergabeAbweichung" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td colspan="2">%DNDUPLOAD{autostart="1" blockgui="1" extraclass="" height="200px" qrcode="" tasksgrid="" webtopic="" width="100%"}%</td>
+		<td colspan="2">%DNDUPLOAD{autostart="1" blockgui="1" extraclass="" height="200px" qrcode="" tasksgrid="" webtopic="%WEB%/%BASETOPIC%" width="100%"}%</td>
 	</tr>
 %ENDSECTION{name="freigabe_section_2_view"}%
 
 %META:FORM{name="InvestmentForm"}%
-%META:FILEATTACHMENT{name="ball.jpg" attachment="ball.jpg" attr="" comment="" date="1439309986" path="ball.jpg" size="1999" user="GiselaGeheim" version="1"}%
-%META:FILEATTACHMENT{name="archivVorlage.png" attachment="archivVorlage.png" attr="" comment="" date="1439310019" path="archivVorlage.png" size="25876" user="GiselaGeheim" version="1"}%
 %META:PREFERENCE{name="WORKFLOW" title="WORKFLOW" type="Set" value="InvestmentWorkflow"}%
