@@ -1,0 +1,20 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1437726692" format="1.1" reprev="9" version="2"}%
+| *Name* | *Type* | *Size* | *Values* | *Tooltip message* | *Attributes* |
+| Antragsteller | select2 | 50 | %SCRIPTURL{view}%/%WEB%/InvestmentAjax?contenttype=text/plain;skin=text;section=users; | Name des Antragsstellers | foo="M" initUrl="%SCRIPTURL{view}%/%WEB%/InvestmentAjax?section=users_init;contenttype=text/plain;skin=text;" displayTopic="%WEB%.InvestmentAjax" displaySection="users_display" |
+| Antragsdatum | date | | %DATE% | Datum des Antrags | M |
+| Vorgesetzter | select2 | 50 | %SCRIPTURL{view}%/%WEB%/InvestmentAjax?contenttype=text/plain;skin=text;section=fuehrung; | Name des Vorgesetzten | M |
+| Fachbereich | select+values | 1 | Hausmeister=%HAUSMEISTER%, IT=%IT%, Marketing=%MARKETING%, FuS=%FUS% | Name des Fachbereichs | M |
+| Produktbeschreibung | textarea | | | Beschreibung des Produkts | M |
+| Grund | text | 53 | | Beschaffungsgrund | M |
+| Preis | text | 53 | | Kosten der Ware | |
+| Lieferant | text | 53 | | Name des Lieferanten | |
+| Angebotsnummer | text | 53 | | Nummer des Angebots | |
+| WeitereKosten | text | 53 | | Bei keinen weiteren Kosten bitte "nein" eintragen | |
+| Miete | select+values | 1 | ja, nein | Miete/Leasing möglich? | |
+| Erstbeschaffung | select+values | 1 | ja, nein | Beschaffung erfolgt zum ersten Mal? | |
+| Anschaffungstermin | text | 53 | | Geplanter Fertigstellungs./Anschaffungstermin | |
+| Vergabehoehe | select+values | 1 | bis 1500&euro;=üblicher Preisvergleich, bis 500&euro;=3 Angebote, über 500&euro;=5 Angebote | Beschaffungsgrund | |
+| VergabeAbweichung | textarea | | | Begründung für evtl. Abweichung der Vergabe |
+
+%META:PREFERENCE{name="WORKFLOW" title="WORKFLOW" type="Set" value=""}%
+%META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="AdminUser"}%

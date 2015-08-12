@@ -1,0 +1,68 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1436807939" format="1.1" reprev="4" version="2"}%
+
+%TMPL:INCLUDE{"edit"}%
+
+%TMPL:DEF{"content"}%
+	%TMPL:P{"simpleheader"}%
+	%TMPL:P{"formstart"}%
+		%TMPL:P{"formtop"}%
+			<div class="widgetBlockContent">
+				<table class="metaDataHead" id="editRequestData">
+					%SWITCHTMPL{"%WORKFLOWSTATE%"}%
+				</table>
+			</div>
+		%TMPL:P{"topicinfo"}%
+	%TMPL:P{"formend"}%
+%TMPL:END%
+
+%TMPL:DEF{"NEW"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_edit"}%
+%TMPL:END%
+
+%TMPL:DEF{"ANTRAGSSTELLUNG"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_edit"}%
+%TMPL:END%
+
+%TMPL:DEF{"VORPRUEFUNG"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_edit"}%
+%TMPL:END%
+
+%TMPL:DEF{"PREISERMITTLUNG"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_edit"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_edit"}%
+%TMPL:END%
+
+%TMPL:DEF{"PRUEFUNG"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_edit"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_edit"}%
+%TMPL:END%
+
+%TMPL:DEF{"FREIGABE"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_edit"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_edit"}%
+%TMPL:END%
+
+%TMPL:DEF{"BESTELLUNG"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_edit"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_edit"}%
+%TMPL:END%
+
+%TMPL:DEF{"WARENANNAHME"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_edit"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_edit"}%
+%TMPL:END%
+
+%TMPL:DEF{"UEBERGABE"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_edit"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_edit"}%
+%TMPL:END%
+
+%TMPL:DEF{"ABGELEHNT"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%TMPL:END%
+
+%TMPL:DEF{"ABGESCHLOSSEN"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_edit"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_edit"}%
+%TMPL:END%

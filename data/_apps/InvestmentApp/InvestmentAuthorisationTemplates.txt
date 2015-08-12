@@ -1,0 +1,140 @@
+%META:TOPICINFO{author="GiselaGeheim" comment="pending" date="1439310019" format="1.1" version="3"}%
+%STARTSECTION{name="freigabe_section_1_edit"}%
+	<tr>
+		<td>Antragsteller%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Antragsteller" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>Antragsdatum%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Antragsdatum" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>Zust&auml;ndiger Vorgesetzter%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Vorgesetzter" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>Zust&auml;ndiger Fachbereich%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Fachbereich" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>Produktbeschreibung%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Produktbeschreibung" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>Grund f&uuml;r die Beschaffung%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Grund" format="$edit"}%</td>
+	</tr>
+%ENDSECTION{name="freigabe_section_1_edit"}%
+
+%STARTSECTION{name="freigabe_section_1_view"}%
+	<tr>
+		<td>Antragsteller</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Antragsteller" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>Antragsdatum</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Antragsdatum" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>Zust&auml;ndiger Vorgesetzter</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Vorgesetzter" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>Zust&auml;ndiger Fachbereich</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Fachbereich" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>Produktbeschreibung</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Produktbeschreibung" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>Grund f&uuml;r die Beschaffung</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Grund" format="$value"}%</td>
+	</tr>
+%ENDSECTION{name="freigabe_section_1_view"}%
+
+%STARTSECTION{name="freigabe_section_2_edit"}%
+	<tr>
+		<td>Preis%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Preis" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>Lieferant%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Lieferant" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>Angebotsnummer%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Angebotsnummer" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>Weitere Kosten%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="WeitereKosten" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>&Uuml;ber Miete/Leasing%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Miete" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>Erstbeschaffung?%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Erstbeschaffung" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>Geplanter Fertigstellungs-/Anschaffungstermin%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Anschaffungstermin" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>Vergabeh&ouml;he%RED% *%ENDCOLOR%</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Vergabehoehe" format="$edit"}%</td>
+	</tr>
+	<tr>
+		<td>Begr&uuml;ndung f&uuml;r evtl. Abweichung der Vergabe</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="VergabeAbweichung" format="$edit"}%</td>
+	</tr>
+%ENDSECTION{name="freigabe_section_2_edit"}%
+
+%STARTSECTION{name="freigabe_section_2_view"}%
+	<tr>
+		<td>Preis</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Preis" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>Lieferant</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Lieferant" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>Angebotsnummer</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Angebotsnummer" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>Weitere Kosten</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="WeitereKosten" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>&Uuml;ber Miete/Leasing</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Miete" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>Erstbeschaffung?</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Erstbeschaffung" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>Geplanter Fertigstellungs-/Anschaffungstermin</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Anschaffungstermin" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>Vergabeh&ouml;he</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Vergabehoehe" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td>Begr&uuml;ndung f&uuml;r evtl. Abweichung der Vergabe</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="VergabeAbweichung" format="$value"}%</td>
+	</tr>
+	<tr>
+		<td colspan="2">%DNDUPLOAD{autostart="1" blockgui="1" extraclass="" height="200px" qrcode="" tasksgrid="" webtopic="" width="100%"}%</td>
+	</tr>
+%ENDSECTION{name="freigabe_section_2_view"}%
+
+%META:FORM{name="InvestmentForm"}%
+%META:FILEATTACHMENT{name="ball.jpg" attachment="ball.jpg" attr="" comment="" date="1439309986" path="ball.jpg" size="1999" user="GiselaGeheim" version="1"}%
+%META:FILEATTACHMENT{name="archivVorlage.png" attachment="archivVorlage.png" attr="" comment="" date="1439310019" path="archivVorlage.png" size="25876" user="GiselaGeheim" version="1"}%
+%META:PREFERENCE{name="WORKFLOW" title="WORKFLOW" type="Set" value="InvestmentWorkflow"}%

@@ -1,0 +1,48 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1426694764" format="1.1" reprev="12" version="30"}%
+---++ Defaults
+| *State type* | *Left tab* | *Right tab* | *Approved* |
+| approved | Approved Page | Discussion | 1 |
+| draft | Approved Page | Draft | 0 |
+| discussion | Approved Page | Discussion | 0 |
+
+---++ States
+%EDITTABLE{}%
+| *State* | *Allow Edit* | *Allow Move* | *Allow Comment* | *Message* | *State Type* | *Progress* |
+| NEW | LOGGEDIN | LOGGEDIN | LOGGEDIN | Neuer Investitionsantrag. | draft | 000 |
+| ANTRAGSSTELLUNG | %QUERY{fields[name="Antragsteller"].value}%  | %QUERY{fields[name="Antragsteller"].value}%  | LOGGEDIN | Dieses Dokument ist im Entwurf. | draft | 000 |
+| VORPRUEFUNG | %QUERY{fields[name="Vorgesetzter"].value}%,nobody | %QUERY{fields[name="Vorgesetzter"].value}% | %QUERY{fields[name="Vorgesetzter"].value}% | Dieser Investitionsantrag unterliegt einer Vorabprüfung. | draft | 000 |
+| PREISERMITTLUNG | %QUERY{fields[name="Fachbereich"].value}% | nobody | %QUERY{fields[name="Fachbereich"].value}%, %QUERY{fields[name="Antragsteller"].value}% | Ermittlungs des Einkaufspreises. | discussion | 000 |
+| PRUEFUNG | %QUERY{fields[name="Vorgesetzter"].value}% | nobody | nobody | Der Investitionsantrag wird geprüft. | discussion | 000 |
+| FREIGABE | %VORSTAND% | nobody | nobody | Der Investitionsantrag liegt zur Freigabe bereit. | discussion | 000 |
+| BESTELLUNG | %QUERY{fields[name="Fachbereich"].value}% | %QUERY{fields[name="Fachbereich"].value}% | %QUERY{fields[name="Fachbereich"].value}%,%QUERY{fields[name="Vorgesetzter"].value}% | Der Investitionsantrag genehmigt, Produkt wird bestellt. | discussion | 000 |
+| WARENANNAHME | %QUERY{fields[name="Fachbereich"].value}% | %QUERY{fields[name="Fachbereich"].value}% | %QUERY{fields[name="Fachbereich"].value}%,nobody | Produkt ist bestellt. Die Warenannahme kann erfolgen. | discussion | 000 |
+| UEBERGABE | %QUERY{fields[name="Antragsteller"].value}% | nobody | %QUERY{fields[name="Antragsteller"].value}%,nobody | Ware an den Antragsteller übergeben. | discussion | 000 |
+| ABGELEHNT | nobody | nobody | %QUERY{fields[name="Antragsteller"].value}%,nobody | Der Investitionsantrag wurde abgelehnt. | approved | 000 |
+| ABGESCHLOSSEN | nobody | nobody | nobody | Vorgang erfolgreich abgeschlossen | approved | 000 |
+ 
+---++ Transitions
+%EDITTABLE{}%
+| *State* | *Action* | *Next State* | *Allowed* | *Notify* | *Condition* | *Warning* | *Attribute* | *Tasked* | *Task description* | *Due* |
+| NEW | Antrag Anlegen | ANTRAGSSTELLUNG | LOGGEDIN, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | NEW | | | |
+| ANTRAGSSTELLUNG | Antrag stellen | VORPRUEFUNG | %QUERY{fields[name="Antragsteller"].value}%, KeyUserGroup | %QUERY{fields[name="Vorgesetzter"].value}% | | | | | | |
+| ANTRAGSSTELLUNG | Antrag verwerfen | ABGELEHNT | %QUERY{fields[name="Antragsteller"].value}%, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | REMARK | | | |
+| VORPRUEFUNG | An Fachbereich weitergeben | PREISERMITTLUNG | %QUERY{fields[name="Vorgesetzter"].value}%, KeyUserGroup | %QUERY{fields[name="Fachbereich"].value}% | | | ACCEPT | | Bitte ermitteln Sie den Warenpreis. | |
+| VORPRUEFUNG | Um Überarbeitung bitten | ANTRAGSSTELLUNG | %QUERY{fields[name="Vorgesetzter"].value}%, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | REMARK | | Bitte überarbeiten Sie den Investitionsantrag. | |
+| VORPRUEFUNG | Antrag ablehnen | ABGELEHNT | %QUERY{fields[name="Vorgesetzter"].value}%, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | REMARK | | | |
+| PREISERMITTLUNG | Antrag prüfen lassen | PRUEFUNG | %QUERY{fields[name="Fachbereich"].value}%, KeyUserGroup | %QUERY{fields[name="Vorgesetzter"].value}% | | | ACCEPT | | Bitte prüfen Sie den Investitionsantrag. | |
+| PREISERMITTLUNG | Um Überarbeitung bitten | ANTRAGSSTELLUNG | %QUERY{fields[name="Fachbereich"].value}%, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | REMARK | | Bitte überarbeiten Sie den Investitionsantrag. | |
+| PREISERMITTLUNG | Antrag ablehnen | ABGELEHNT | %QUERY{fields[name="Fachbereich"].value}%, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | REMARK | | | |
+| PRUEFUNG | Antrag freigeben lassen | FREIGABE | %QUERY{fields[name="Vorgesetzter"].value}%, KeyUserGroup | %VORSTAND% | | | ACCEPT | | Bitte Antrag freigeben. | |
+| PRUEFUNG | Um Überarbeitung bitten | PREISERMITTLUNG | %QUERY{fields[name="Vorgesetzter"].value}%, KeyUserGroup | %QUERY{fields[name="Fachbereich"].value}% | | | REMARK | | Bitte überarbeiten Sie den Investitionsantrag. | |
+| PRUEFUNG | Antrag ablehnen | ABGELEHNT | %QUERY{fields[name="Vorgesetzter"].value}%, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | REMARK | | | |
+| FREIGABE | Antrag freigeben | BESTELLUNG | %VORSTAND%, KeyUserGroup | %QUERY{fields[name="Fachbereich"].value}% | | | ACCEPT | | Bitte Bestellung beauftragen. | |
+| FREIGABE | Um Überarbeitung bitten | PREISERMITTLUNG | %VORSTAND%, KeyUserGroup | %QUERY{fields[name="Fachbereich"].value}% | | | REMARK | | Bitte überarbeiten Sie den Investitionsantrag. | |
+| FREIGABE | Antrag ablehnen | ABGELEHNT | %VORSTAND%, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | REMARK | | | |
+| BESTELLUNG | Ware bestellt | WARENANNAHME | %QUERY{fields[name="Fachbereich"].value}%, KeyUserGroup | %QUERY{fields[name="Fachbereich"].value}% | | | REMARK | | Bitte Ware nach Ankunft annehmen | |
+| WARENANNAHME | Ware eingetroffen | UEBERGABE | %QUERY{fields[name="Fachbereich"].value}%, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | REMARK | | Bitte angenommende Ware übergeben | |
+| UEBERGABE | Ware entgegengenommen | ABGESCHLOSSEN | %QUERY{fields[name="Antragsteller"].value}%, KeyUserGroup | | | | REMARK | | | |
+
+ * Set NOWYSIWYG=1
+ * Set WORKFLOW=
+ * Set VIEW_TEMPLATE = WorkflowView
+ * Set ALLOWTOPICCHANGE = AdminGroup

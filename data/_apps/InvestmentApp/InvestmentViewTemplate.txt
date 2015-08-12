@@ -1,0 +1,74 @@
+%META:TOPICINFO{author="GiselaGeheim" comment="reprev" date="1439310554" format="1.1" reprev="2" version="2"}%
+%META:TOPICPARENT{name="WebHome"}%
+%TMPL:INCLUDE{"view"}%
+
+%TMPL:DEF{"content"}%
+
+<div class="widgetBlockTitle">Investitionsantrag</div>
+<div class="widgetBlockContent">
+	<table class="metaDataHead"> 
+		<tbody>
+			%SWITCHTMPL{"%WORKFLOWSTATE%"}%
+		</tbody> 
+	</table>	  
+</div>
+
+%TMPL:DEF{"ANTRAGSSTELLUNG"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%TMPL:END%
+
+%TMPL:DEF{"VORPRUEFUNG"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%TMPL:END%
+
+%TMPL:DEF{"PREISERMITTLUNG"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%TMPL:END%
+
+%TMPL:DEF{"PRUEFUNG"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%TMPL:END%
+
+%TMPL:DEF{"FREIGABE"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%TMPL:END%
+
+%TMPL:DEF{"BESTELLUNG"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%TMPL:END%
+
+%TMPL:DEF{"WARENANNAHME"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%TMPL:END%
+
+%TMPL:DEF{"UEBERGABE"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%TMPL:END%
+
+%TMPL:DEF{"ABGELEHNT"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%TMPL:END%
+
+%TMPL:DEF{"ABGESCHLOSSEN"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%TMPL:END%
+
+%TMPL:END%
+
+%TMPL:DEF{"kvptransitions"}%
+%TMPL:P{"TEXT_BLOCKUI"}%
+<div class="modacKVPtable" id="KVPTransitions">
+| *%MAKETEXT{"Freigabeprozess"}%* ||
+| %MAKETEXT{"State"}% | %MAKETEXT{%GETWORKFLOWROW{message}%}% |
+%IF{"$'WORKFLOWMETA{Remark}'" then="| %MAKETEXT{"Remarks for this state:"}% | <pre>$percentWORKFLOWMETA{Remark}$percent</pre> |$n"}%%IF{"istopic '%WORKFLOWORIGIN%' and not $WORKFLOWORIGIN = '%TOPIC%'" then="| %MAKETEXT{"Difference to     approved version"}% | $percentBUTTON{$quot%MAKETEXT{"Compare with approved version"}%$quot href=$quot$percentSCRIPTURL{compare}$percent/%WEB%/%TOPIC%?external=$percentWORKFLOWORIGIN$percent$quot}$percent |$n"}%| %MAKETEXT{"Next step    "}% | %WORKFLOWTRANSITION% |
+| %MAKETEXT{"Last editing person"}% | %REVINFO{format="$username"}% |
+</div>
+%TMPL:END%
