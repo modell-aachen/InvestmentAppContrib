@@ -6,16 +6,16 @@
 	<div class="widgetBlockTitle">%MAKETEXT{"Investment Proposals"}%</div>
 	<div class="widgetBlockContent">
 		%TABPANE{class="simple"}%	
-			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Antragsstellung" status="ANTRAGSSTELLUNG"}%
-			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Vorprüfung" status="VORPRUEFUNG"}%
-			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Preisermittlung" status="PREISERMITTLUNG"}%
-			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Prüfung" status="PRUEFUNG"}%
-			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Freigabe" status="FREIGABE"}%
-			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Bestellung" status="BESTELLUNG"}%
-			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Warenannahme" status="WARENANNAHME"}%
-			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Übergabe" status="UEBERGABE"}%
-			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="abgelehnte Anträge" status="ABGELEHNT"}%
-			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="abgeschlossene Anträge" status="ABGESCHLOSSEN"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="%MAKETEXT{"Proposal"}%" status="ANTRAGSSTELLUNG"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="%MAKETEXT{"Prelim"}%" status="VORPRUEFUNG"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="%MAKETEXT{"Price Fixing"}%" status="PREISERMITTLUNG"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="%MAKETEXT{"Testing"}%" status="PRUEFUNG"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="%MAKETEXT{"Approval"}%" status="FREIGABE"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="%MAKETEXT{"Order"}%" status="BESTELLUNG"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="%MAKETEXT{"Receive"}%" status="WARENANNAHME"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="%MAKETEXT{"Handover"}%" status="UEBERGABE"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="%MAKETEXT{"Rejected Proposals"}%" status="ABGELEHNT"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="%MAKETEXT{"Finished Proposals"}%" status="ABGESCHLOSSEN"}%
 		%ENDTABPANE%
 	</div>
 %TMPL:END% 
@@ -27,11 +27,11 @@
 	<table class="tablesorter">
 		<thead>
 			<tr>
-				<th class="header">Antragsnr.</th>
-				<th class="header">Antragssteller</th>
-				<th class="header">Fachbereich</th>
-				<th class="header">Produktbeschr.</th>
-				<th class="header">Antragsdatum</th>
+				<th class="header">%MAKETEXT{"Proposal Number"}%</th>
+				<th class="header">%MAKETEXT{"Requester"}%</th>
+				<th class="header">%MAKETEXT{"Department"}%</th>
+				<th class="header">%MAKETEXT{"Product Description"}%</th>
+				<th class="header">%MAKETEXT{"Proposal Date"}%</th>
 			</tr>
 		</thead>
 		<tbody>
