@@ -6,6 +6,7 @@
 	%TMPL:P{"simpleheader"}%
 	%TMPL:P{"formstart"}%
 		%TMPL:P{"formtop"}%
+			<div class="widgetBlockTitle">Investitionsantrag</div>
 			<div class="widgetBlockContent">
 				<table class="metaDataHead" id="editRequestData">
 					%SWITCHTMPL{"%WORKFLOWSTATE%"}%
