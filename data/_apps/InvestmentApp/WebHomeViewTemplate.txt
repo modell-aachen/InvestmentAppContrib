@@ -3,18 +3,21 @@
 %TMPL:INCLUDE{"view"}%
 
 %TMPL:DEF{"content"}%
-	%TABPANE{class="simple"}%	
-		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Antragsstellung" status="ANTRAGSSTELLUNG"}%
-		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Vorprüfung" status="VORPRUEFUNG"}%
-		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Preisermittlung" status="PREISERMITTLUNG"}%
-		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Prüfung" status="PRUEFUNG"}%
-		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Freigabe" status="FREIGABE"}%
-		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Bestellung" status="BESTELLUNG"}%
-		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Warenannahme" status="WARENANNAHME"}%
-		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Übergabe" status="UEBERGABE"}%
-		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="abgelehnte Anträge" status="ABGELEHNT"}%
-		%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="abgeschlossene Anträge" status="ABGESCHLOSSEN"}%
-	%ENDTABPANE%
+	<div class="widgetBlockTitle">%MAKETEXT{"Investment Proposals"}%</div>
+	<div class="widgetBlockContent">
+		%TABPANE{class="simple"}%	
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Antragsstellung" status="ANTRAGSSTELLUNG"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Vorprüfung" status="VORPRUEFUNG"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Preisermittlung" status="PREISERMITTLUNG"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Prüfung" status="PRUEFUNG"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Freigabe" status="FREIGABE"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Bestellung" status="BESTELLUNG"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Warenannahme" status="WARENANNAHME"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="Übergabe" status="UEBERGABE"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="abgelehnte Anträge" status="ABGELEHNT"}%
+			%INCLUDE{"%TOPIC%ViewTemplate" section="tab_antraege" title="abgeschlossene Anträge" status="ABGESCHLOSSEN"}%
+		%ENDTABPANE%
+	</div>
 %TMPL:END% 
 
 %STARTSECTION{name="tab_antraege"}%%TAB{"%title%" url="%SCRIPTURLPATH{"rest"}%/RenderPlugin/tag?name=INCLUDE;param=%WEB%.WebHomeViewTemplate;section=suche_antraege;status=%status%"}%%ENDTAB%%ENDSECTION{name="tab_antraege"}%
