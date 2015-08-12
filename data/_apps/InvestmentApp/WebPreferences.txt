@@ -35,6 +35,19 @@
 	  
    * Set NO_MODAC_HEAD = 1
 
+   * Set FUS = FuSGroup
+
+   * Set FUEHRUNGSKRAEFTE = FuehrungkraefteGroup
+
+   * Set HAUSMEISTER = HausmeisterGroup
+
+   * Set IT= ITGroup
+
+   * Set MARKETING = MarketingGroup
+
+   * Set VORSTAND = VorstandGroup
+
+
 ---++ Access control
 
 Users or groups who are allowed to view, change and rename topics in the <nop>%WEB% web.
