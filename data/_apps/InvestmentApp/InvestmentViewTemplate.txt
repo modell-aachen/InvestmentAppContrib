@@ -72,3 +72,16 @@
 | %MAKETEXT{"Last editing person"}% | %REVINFO{format="$username"}% |
 </div>
 %TMPL:END%
+
+%TMPL:DEF{"head"}%
+%TMPL:PREV%
+%ADDTOZONE{
+	"head"
+	id = "investmentViewCSS"
+	text = "
+	<literal>
+		<link rel='stylesheet' type='text/css' href='%PUBURLPATH%/System/%WEB%App/investment.css' />
+	</literal>
+	"
+}%
+%TMPL:END%
