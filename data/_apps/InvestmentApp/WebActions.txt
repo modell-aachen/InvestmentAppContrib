@@ -2,3 +2,6 @@
 %META:TOPICPARENT{name="Templates"}%
 
    * <a href="%SCRIPTURLPATH{"edit"}%/%BASEWEB%/InvestmentAUTOINC000?template=%WEB%.InvestmentEdit;templatetopic=%WEB%.InvestmentTemplate;formtemplate=InvestmentForm;t=%GMTIME{$epoch}%">%MAKETEXT{"New Investment Proposal"}%</a>
+
+%META:PREFERENCE{name="WORKFLOW" title="WORKFLOW" type="Set" value=""}%
+%META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="AdminUser"}%
