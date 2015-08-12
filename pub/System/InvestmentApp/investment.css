@@ -1,3 +1,9 @@
-body {
-	background-color: #ff0000;
+.investmentKVPtable .foswikiTable {
+	color: #999;
+}
+.investmentKVPtable .foswikiTable th {
+	color: #fff;
+	background-color: #6494c9;
+	font-size: 16px;
+	text-align: left;
 }
