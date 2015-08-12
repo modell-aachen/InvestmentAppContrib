@@ -2,7 +2,7 @@
 | *Name* | *Type* | *Size* | *Values* | *Tooltip message* | *Attributes* |
 | Antragsteller | select2 | 50 | %SCRIPTURL{view}%/%WEB%/InvestmentAjax?contenttype=text/plain;skin=text;section=users; | Name des Antragsstellers | foo="M" initUrl="%SCRIPTURL{view}%/%WEB%/InvestmentAjax?section=users_init;contenttype=text/plain;skin=text;" displayTopic="%WEB%.InvestmentAjax" displaySection="users_display" |
 | Antragsdatum | date | | %DATE% | Datum des Antrags | M |
-| Vorgesetzter | select2 | 50 | %SCRIPTURL{view}%/%WEB%/InvestmentAjax?contenttype=text/plain;skin=text;section=fuehrung; | Name des Vorgesetzten | M |
+| Vorgesetzter | select2 | 50 | %SCRIPTURL{view}%/%WEB%/InvestmentAjax?contenttype=text/plain;skin=text;section=fuehrung; | Name des Vorgesetzten | foo="M" initUrl="%SCRIPTURL{view}%/%WEB%/InvestmentAjax?section=users_init;contentty    pe=text/plain;skin=text;" displayTopic="%WEB%/InvestmentAjax" displaySection="fuehrung_display" |
 | Fachbereich | select+values | 1 | Hausmeister=%HAUSMEISTER%, IT=%IT%, Marketing=%MARKETING%, FuS=%FUS% | Name des Fachbereichs | M |
 | Produktbeschreibung | textarea | | | Beschreibung des Produkts | M |
 | Grund | text | 53 | | Beschaffungsgrund | M |

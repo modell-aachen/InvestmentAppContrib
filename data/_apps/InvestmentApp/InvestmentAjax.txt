@@ -6,6 +6,8 @@
 
 	%STARTSECTION{name="users_display"}%%QUERY{"'Main.%id%'/FirstName"}% %QUERY{"'Main.%id%'/LastName"}%%ENDSECTION{name="users_display"}%
 
-	%STARTSECTION{name="fuehrung"}%{"results":[%GROUPINFO{"FuehrungkraefteGroup" format="{\"id\":\"$username\", \"text\":\"$username\"}"}%]}%ENDSECTION{name="fuehrung"}%
+	%STARTSECTION{name="fuehrung"}%{"results":[%GROUPINFO{"FuehrungkraefteGroup" format="{\"id\":\"$username\", \"text\":\"$percentQUERY{\"'Main.$username'/FirstName\"}$percent $percentQUERY{\"'Main.$username'/LastName\"}$percent\"}"}%]}%ENDSECTION{name="fuehrung"}%
+
+	%STARTSECTION{name="fuehrung_display"}%%QUERY{"'Main.%id%'/FirstName"}% %QUERY{"'Main.%id%'/LastName"}%%ENDSECTION{name="fuehrung_display"}%
 </verbatim>
 
