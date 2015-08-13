@@ -1,132 +1,132 @@
 %META:TOPICINFO{author="KevinAlleine" comment="pending" date="1439367522" format="1.1" version="6"}%
 %STARTSECTION{name="freigabe_section_1_edit"}%
 	<tr>
-		<td>Antragsteller%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Requester"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Antragsteller" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>Antragsdatum%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Proposal Date"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Antragsdatum" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>Zust&auml;ndiger Vorgesetzter%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Superior"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Vorgesetzter" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>Zust&auml;ndiger Fachbereich%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Responsible Department"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Fachbereich" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>Produktbeschreibung%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Product Description"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Produktbeschreibung" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>Grund f&uuml;r die Beschaffung%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Proposal Reason"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Grund" format="$edit"}%</td>
 	</tr>
 %ENDSECTION{name="freigabe_section_1_edit"}%
 
 %STARTSECTION{name="freigabe_section_1_view"}%
 	<tr>
-		<td>Antragsteller</td>
+		<td>%MAKETEXT{"Requester"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Antragsteller" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>Antragsdatum</td>
+		<td>%MAKETEXT{"Proposal Date"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Antragsdatum" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>Zust&auml;ndiger Vorgesetzter</td>
+		<td>%MAKETEXT{"Superior"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Vorgesetzter" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>Zust&auml;ndiger Fachbereich</td>
+		<td>%MAKETEXT{"Responsible Department"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Fachbereich" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>Produktbeschreibung</td>
+		<td>%MAKETEXT{"Product Description"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Produktbeschreibung" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>Grund f&uuml;r die Beschaffung</td>
+		<td>%MAKETEXT{"Proposal Reason"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Grund" format="$value"}%</td>
 	</tr>
 %ENDSECTION{name="freigabe_section_1_view"}%
 
 %STARTSECTION{name="freigabe_section_2_edit"}%
 	<tr>
-		<td>Preis%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Price"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Preis" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>Lieferant%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Vendor"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Lieferant" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>Angebotsnummer%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Quotation Number"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Angebotsnummer" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>Weitere Kosten%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"further costs"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="WeitereKosten" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>&Uuml;ber Miete/Leasing%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Leasing Possible?"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Miete" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>Erstbeschaffung?%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"First Purchase?"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Erstbeschaffung" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>Geplanter Fertigstellungs-/Anschaffungstermin%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Planned Finish-/Purchase Date"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Anschaffungstermin" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>Vergabeh&ouml;he%RED% *%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Amount Requiring Cost"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Vergabehoehe" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>Begr&uuml;ndung f&uuml;r evtl. Abweichung der Vergabe</td>
+		<td>%MAKETEXT{"Possible Reason for deviate Cost"}% %RED%*%ENDCOLOR%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="VergabeAbweichung" format="$edit"}%</td>
 	</tr>
 %ENDSECTION{name="freigabe_section_2_edit"}%
 
 %STARTSECTION{name="freigabe_section_2_view"}%
 	<tr>
-		<td>Preis</td>
+		<td>%MAKETEXT{"Price"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Preis" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>Lieferant</td>
+		<td>%MAKETEXT{"Vendor"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Lieferant" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>Angebotsnummer</td>
+		<td>%MAKETEXT{"Quotation Number"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Angebotsnummer" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>Weitere Kosten</td>
+		<td>%MAKETEXT{"further costs"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="WeitereKosten" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>&Uuml;ber Miete/Leasing</td>
+		<td>%MAKETEXT{"Leasing Possible?"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Miete" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>Erstbeschaffung?</td>
+		<td>%MAKETEXT{"First Purchase?"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Erstbeschaffung" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>Geplanter Fertigstellungs-/Anschaffungstermin</td>
+		<td>%MAKETEXT{"Planned Finish-/Purchase Date"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Anschaffungstermin" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>Vergabeh&ouml;he</td>
+		<td>%MAKETEXT{"Amount Requiring Cost"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Vergabehoehe" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>Begr&uuml;ndung f&uuml;r evtl. Abweichung der Vergabe</td>
+		<td>%MAKETEXT{"Possible Reason for deviate Cost"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="VergabeAbweichung" format="$value"}%</td>
 	</tr>
 	<tr>
