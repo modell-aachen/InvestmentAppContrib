@@ -1,4 +1,5 @@
-/System/InvestmentAppContrib.txt 0644
+data/System/InvestmentAppContrib.txt 0644
+data/_apps/InvestmentApp/Investment.txt 0644
 data/_apps/InvestmentApp/InvestmentAjax.txt 0644
 data/_apps/InvestmentApp/InvestmentAuthorisationTemplates.txt 0644
 data/_apps/InvestmentApp/InvestmentEditTemplate.txt 0644
@@ -17,7 +18,6 @@ data/_apps/InvestmentApp/WebIndex.txt 0644
 data/_apps/InvestmentApp/WebLeftBarExample.txt 0644
 data/_apps/InvestmentApp/WebNotify.txt 0644
 data/_apps/InvestmentApp/WebPreferences.txt 0644
-data/_apps/InvestmentApp/WebRightBar.txt 0644
 data/_apps/InvestmentApp/WebRss.txt 0644
 data/_apps/InvestmentApp/WebSearch.txt 0644
 data/_apps/InvestmentApp/WebSearchAdvanced.txt 0644
