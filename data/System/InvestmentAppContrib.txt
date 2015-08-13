@@ -1,6 +1,63 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="pending" date="1439469959" format="1.1" version="6"}%
 ---+!! InvestmentAppContrib
 
----++ Info
+<!--   One line description, required for extensions repository catalog. BuildContrib will fill in the SHORTDESCRIPTION with the value of $SHORTDESCRIPTION from the .pm module, or you can redefine it here if you prefer.    
+
+* Set SHORTDESCRIPTION = Application for Investment requests   
+
+-->
+
+%SHORTDESCRIPTION%
+
+%TOC%
+
+---++ %BLUE%Introduction%ENDCOLOR%
+
+The Investment application offers a workflow for an Investment request process
+---++ %BLUE%Description%ENDCOLOR%
+---+++ Workflow
+   1 *ANTRAGSSTELLUNG*
+<p style="margin-left: 40px;">After creating a new investment proposal the author may check his proposal in the <strong>ANTRAGSSTELLUNG </strong>state.</p> <ol start="2"> <li> *VORPRUEFUNG* </li> </ol><p style="margin-left: 40px;">If the Author is satisfied with his proposal, he may give it to the superior to check the proposal. When the superior is asked to confirm the news, its state is  *VORPRUEFUNG.* </p> <ol start="3"> <li> *PREISERMITTLUNG* </li> </ol><p style="margin-left: 40px;">After checking the proposal by the superior, the responsible Department has to fill the missing information of the second part of the form. The proposal information form ist now complete</p> <ol start="4"> <li> *PRUEFUNG* </li> </ol><p style="margin-left: 40px;">The superior need to check the proposal again after the form is completed</p> <ol start="5"> <li> *FREIGABE* </li> </ol><p style="margin-left: 40px;">The final approval has to be done by the top management.</p> <ol start="6"> <li> *BESTELLUNG* </li> </ol><p style="margin-left: 40px;">Is the management satisfied with the proposal, the responsible department may now order the product</p> <ol start="7"> <li> *WARENANNAHME* </li> </ol><p style="margin-left: 40px;">The department which ordered the product is responsible to take care of the product after it arrives</p> <ol start="8"> <li> *UEBERGABE* </li> </ol><p style="margin-left: 40px;">Is the product received by the department, it will be assigned to the requester.</p> <ol start="9"> <li> *ABGELEHNT* </li> </ol><p style="margin-left: 40px;">Each checking instance like the superior or the responsible department may refuse the proposal. In this case it get the state  *ABGELEHNT* .</p> <ol start="10"> <li> *ABGESCHLOSSEN* </li> </ol><p style="margin-left: 40px;">If the requester received the ordered product, it's state is  *ABGESCHLOSSEN* </p>
+
+---+++ Two-piece form
+
+The form has two different part. The first one has just mandatory fields and consists of the following fields:
+   * Requester
+   * Proposal Date
+   * Superior
+   * Responsible Department
+   * Product Description
+   * Proposal Reason
+The second part will only get visible when the superior confirmed the proposal for the first time. The responsible department has to fill the second part, consisting of the following fields:
+   * Price
+   * Vendor
+   * Quotation Number
+   * further costs
+   * Leasing Possible?
+   * First Purchase?
+   * Planned Finish-/Purchase Date
+   * Amount Requiring Cost
+   * Possible Reason for deviate Cost
+---++ %BLUE%Installation%ENDCOLOR%
+---+++ Basics
+
+This is step by step manual to install the news application on your wiki system
+   * Open */bin/configure*
+   * Click on *Extensions*
+   * Click on the Button *Install, Update and Remove Extensions*
+   * Search for <strong>InvestmentAppContrib </strong>and activate the checkbox *install*
+   * login as root into the Server, the wiki is running on
+      * <pre> go to the wiki directory for example: cd /var/www/yourWiki </pre>
+      * <pre> cd data</pre>
+      * <pre> mv _apps/InvestmentApp ./</pre>
+      * <pre> service apache2 reload</pre>
+
+---+++ Configuration
+   * Open *Investment/WebPreferences*
+   * add following variables to the *Wiki Settin* <pre> * Set FUS = FuSGroup * Set FUEHRUNGSKRAEFTE = FuehrungkraefteGroup * Set HAUSMEISTER = HausmeisterGroup * Set IT= ITGroup * Set MARKETING = MarketingGroup * Set VORSTAND = VorstandGroup</pre>
+   * fill these groups with the active directory users.
+
+---++ %BLUE%Info%ENDCOLOR%
 
 Many thanks to the following sponsors for supporting this work:
    * Acknowledge any sponsors here
