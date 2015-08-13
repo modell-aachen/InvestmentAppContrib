@@ -13,7 +13,7 @@
 | Miete | select+values | 1 | ja, nein | Miete/Leasing möglich? | |
 | Erstbeschaffung | select+values | 1 | ja, nein | Beschaffung erfolgt zum ersten Mal? | |
 | Anschaffungstermin | text | 53 | | Geplanter Fertigstellungs./Anschaffungstermin | |
-| Vergabehoehe | select+values | 1 | bis 1500&euro;=üblicher Preisvergleich, bis 500&euro;=3 Angebote, über 500&euro;=5 Angebote | Beschaffungsgrund | |
+| Vergabehoehe | select+values | 1 | bis 1500&euro;=üblicher Preisvergleich, bis 5000&euro;=3 Angebote, über 5000&euro;=5 Angebote | Beschaffungsgrund | |
 | VergabeAbweichung | textarea | | | Begründung für evtl. Abweichung der Vergabe |
 
 %META:PREFERENCE{name="WORKFLOW" title="WORKFLOW" type="Set" value=""}%
