@@ -1,4 +1,5 @@
 *,v
 *.lease
 *.changes
+*_bak*
 Investment0*.txt
