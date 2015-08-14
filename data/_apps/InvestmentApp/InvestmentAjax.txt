@@ -1,14 +1,67 @@
 %META:TOPICINFO{author="BaseUserMapping_333" comment="pending" date="1427369215" format="1.1" version="24"}%
 <verbatim>
-	%STARTSECTION{name="users"}%{"results":[%QUERYUSERS{format="{\"id\":\"$wikiName\",\"text\":\"$percentIF{\"'Main.$wikiName'/FirstName AND 'Main.$wikiName'/LastName\" then=\"$percentQUERY{\"'Main.$wikiName'/FirstName\"}$percent $percentQUERY{\"'Main.$wikiName'/LastName\"}$percent\" else=\"$percentQUERY{\"'$wikiName'\"}$percent\"}$percent\"}"}%]}%ENDSECTION{name="users"}%
+	%STARTSECTION{"select2::user"}%
+		<literal>
+			%IF{"context LdapNgPluginEnabled"
+				then="$percntINCLUDE{\"%TOPIC%\" section=\"select2::user::ldap\"}$percnt"
+				else="$percntINCLUDE{\"%TOPIC%\" section=\"select2::user::dbquery\"}$percnt"}%
+		<literal>
+	%ENDSECTION{"select2::user"}%
 	
-	%STARTSECTION{name="users_init"}%{"id":"%URLPARAM{"id"}%", "text":"%QUERY{"'Main.%URLPARAM{"id"}%'/FirstName"}% %QUERY{"'Main.%URLPARAM{"id"}%'/LastName"}%"}%ENDSECTION{name="users_init"}%
+	%STARTSECTION{"select2::user::ldap"}%
+		<literal>
+			%LDAP{
+				urlparam="q"
+				urlparamfields="cn,uid"
+				urlparaminfix="on"
+				filter="objectClass=person"
+				header="{\"results\":["
+				format="{\"id\":\"$cn\",\"text\":\"$cn\"}"
+				footer="]}"
+				separator=","
+				limit="%URLPARAM{"limit" default="20"}%"
+				skip="%CALCULATE{"$EVAL(%URLPARAM{"limit" default="20"}%*(%URLPARAM{"page" default="1"}%-1))"}%"}%
+		</literal>
+	%ENDSECTION{"select2::user::ldap"}%
 
-	%STARTSECTION{name="users_display"}%%QUERY{"'Main.%id%'/FirstName"}% %QUERY{"'Main.%id%'/LastName"}%%ENDSECTION{name="users_display"}%
+	%STARTSECTION{"select2::user::dbquery"}%
+		<literal>
+			%DBQUERY{
+				"form='\b%IF{
+					"defined form"
+					then="%URLPARAM{"form"}%"
+					else="UserForm"
+				}%\b' AND %FORMATLIST{
+					"%IF{
+						"'%URLPARAM{"q"}%'=''"
+						then="."
+						else="%URLPARAM{"q"}%"
+					}%"
+					split="\s+"
+					format="lc(%URLPARAM{"property" default="topictitle"}%)=~lc('$1')" separator=" AND "
+				}%"
+				web="%USERSWEB%"
+				skip="%CALCULATE{"$EVAL(%URLPARAM{"limit" default="10"}%*(%URLPARAM{"page" default="1"}%-1))"}%"
+				limit="%URLPARAM{"limit" default="10"}%"
+				format="{\"id\":\"$topic\",\"text\":\"$percentQUERY{\"'Main.$topic'/FirstName\"}$percent $percentQUERY{\"'Main.$topic'/LastName\"}$percent\"}"
+				separator=",$n"
+				header="{\"results\":[$n"
+				footer="$n]}"
+			}%
+		</literal>
+	%ENDSECTION{"select2::user::dbquery"}%
+	
+	
+	%STARTSECTION{"select2::fuehrung"}%
+		<literal>
+			%FORMATLIST{"$percentGROUPINFO{\"FuehrungkraefteGroup\"}$percent" 
+				pattern="(?:Main\.)?(.*)"
+				header="{\"results\":["
+				format="{\"id\":\"$1\", \"text\":\"$1\"}"
+				footer="]}"}%
+		<literal>
+	%ENDSECTION{"select2::fuehrung"}%
 
-	%STARTSECTION{name="fuehrung"}%{"results":[%GROUPINFO{"FuehrungkraefteGroup" format="{\"id\":\"$username\", \"text\":\"$percentQUERY{\"'Main.$username'/FirstName\"}$percent $percentQUERY{\"'Main.$username'/LastName\"}$percent\"}"}%]}%ENDSECTION{name="fuehrung"}%
-
-	%STARTSECTION{name="fuehrung_display"}%%QUERY{"'Main.%id%'/FirstName"}% %QUERY{"'Main.%id%'/LastName"}%%ENDSECTION{name="fuehrung_display"}%
 </verbatim>
 
 %META:PREFERENCE{name="WORKFLOW" title="WORKFLOW" type="Set" value=""}%
