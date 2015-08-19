@@ -55,39 +55,39 @@
 
 %STARTSECTION{name="freigabe_section_2_edit"}%
 	<tr>
-		<td>%MAKETEXT{"Price"}% %RED%*%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Price"}%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Preis" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>%MAKETEXT{"Vendor"}% %RED%*%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Vendor"}%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Lieferant" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>%MAKETEXT{"Quotation Number"}% %RED%*%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Quotation Number"}%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Angebotsnummer" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>%MAKETEXT{"further costs"}% %RED%*%ENDCOLOR%</td>
+		<td>%MAKETEXT{"further costs"}%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="WeitereKosten" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>%MAKETEXT{"Leasing Possible?"}% %RED%*%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Leasing Possible?"}%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Miete" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>%MAKETEXT{"First Purchase?"}% %RED%*%ENDCOLOR%</td>
+		<td>%MAKETEXT{"First Purchase?"}%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Erstbeschaffung" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>%MAKETEXT{"Planned Finish-/Purchase Date"}% %RED%*%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Planned Finish-/Purchase Date"}%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Anschaffungstermin" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>%MAKETEXT{"Amount Requiring Cost"}% %RED%*%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Amount Requiring Cost"}%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Vergabehoehe" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>%MAKETEXT{"Possible Reason for deviate Cost"}% %RED%*%ENDCOLOR%</td>
+		<td>%MAKETEXT{"Possible Reason for deviate Cost"}%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="VergabeAbweichung" format="$edit"}%</td>
 	</tr>
 %ENDSECTION{name="freigabe_section_2_edit"}%
