@@ -67,7 +67,7 @@
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Angebotsnummer" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>%MAKETEXT{"further costs"}%</td>
+		<td>%MAKETEXT{"Further Costs"}%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="WeitereKosten" format="$edit"}%</td>
 	</tr>
 	<tr>
@@ -75,7 +75,7 @@
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Miete" format="$edit"}%</td>
 	</tr>
 	<tr>
-		<td>%MAKETEXT{"First Purchase?"}%</td>
+		<td>%MAKETEXT{"Replacement Purchase?"}%</td>
 		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="Erstbeschaffung" format="$edit"}%</td>
 	</tr>
 	<tr>
@@ -106,7 +106,7 @@
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="Angebotsnummer" format="$value"}%</td>
 	</tr>
 	<tr>
-		<td>%MAKETEXT{"further costs"}%</td>
+		<td>%MAKETEXT{"Further Costs"}%</td>
 		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="WeitereKosten" format="$value"}%</td>
 	</tr>
 	<tr>

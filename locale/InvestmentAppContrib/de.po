@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: 2012-11-26 00:09+0200\n"
-"Last-Translator: Bartek \n"
+"Last-Translator: Hennes \n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -15,4 +15,130 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.1.6\n"
 
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Investment Proposals"
+msgstr "Investitionsanträge"
+
+#: data/_apps/InvestmentApp/InvestmentEditTemplate.txt
+msgid "Investment Proposal"
+msgstr "Investitionsantrag
+
+#: data/_apps/InvestmentApp/WebActions.txt
+msgid "New Investment Proposal"
+msgstr "Neue Investitionsanträge"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Proposal"
+msgstr "Antragsstellung"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Prelim"
+msgstr "Vorprüfung"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Price Fixing"
+msgstr "Preisermittlung"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Testing"
+msgstr "Prüfung"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Approval"
+msgstr "Freigabe"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Order"
+msgstr "Bestellung"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Receive"
+msgstr "Warenannahme"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Handover"
+msgstr "Übergabe"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Rejected Proposals"
+msgstr "Abgelehnt"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Finished Proposals"
+msgstr "Abgeschlossen"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Proposal Number"
+msgstr "Antragsnr."
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Requester"
+msgstr "Antragsteller"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+msgid "Department"
+msgstr "Fachbereich"
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Product Description"
+msgstr "Produktbeschr."
+
+#: data/_apps/InvestmentApp/WebHomeViewTemplate.txt
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Proposal Date"
+msgstr "Antragsdatum"
+
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Superior"
+msgstr "Antragsdatum"
+
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Responsible Department"
+msgstr "Zuständiger Fachbereich"
+
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Proposal Reason"
+msgstr "Grund für die Beschaffung"
+
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Price"
+msgstr "Preis"
+
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Vendor"
+msgstr "Lieferant"
+
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Quotation Number"
+msgstr "Angebotsnummer"
+
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Further Costs"
+msgstr "Weitere Kosten"
+
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Leasing Possible?"
+msgstr "Über Miete/Leasing?"
+
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Replacement Purchase?"
+msgstr "Ersatzbeschaffung?"
+
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Planned Finish-/Purchase Date"
+msgstr "Geplanter Fertigstellungs-/Anschaffungstermin"
+
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Amount Requiring Cost"
+msgstr "Vergabehöhe"
+
+#: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
+msgid "Possible Reason for deviate Cost"
+msgstr "Begründung für evtl. Abweichung der Vergabe"
+
+#: data/_apps/InvestmentApp/InvestmentViewTemplate.txt
+msgid "Approval Process"
+msgstr "Freigabeprozess"
 
