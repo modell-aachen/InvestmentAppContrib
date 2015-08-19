@@ -92,7 +92,7 @@ msgstr "Antragsdatum"
 
 #: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
 msgid "Superior"
-msgstr "Antragsdatum"
+msgstr "Zuständiger Vorgesetzter"
 
 #: data/_apps/InvestmentApp/InvestmentAuthorisationTemplate.txt
 msgid "Responsible Department"
