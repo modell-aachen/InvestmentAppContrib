@@ -57,21 +57,13 @@ This is step by step manual to install the news application on your wiki system
    * add following variables to the *Wiki Settin* <pre> * Set FUS = FuSGroup * Set FUEHRUNGSKRAEFTE = FuehrungkraefteGroup * Set HAUSMEISTER = HausmeisterGroup * Set IT= ITGroup * Set MARKETING = MarketingGroup * Set VORSTAND = VorstandGroup</pre>
    * fill these groups with the active directory users.
 
----++ %BLUE%Info%ENDCOLOR%
+---++ Info
 
-Many thanks to the following sponsors for supporting this work:
-   * Acknowledge any sponsors here
-
-|  Author(s): | |
-|  Home: | http://www.modell-aachen.de |
-|  Support: | http://www.modell-aachen.de |
-|  Copyright: | © |
+|  Author: | Andreas Hennes <hennes@modell-aachen.de>, Modell Aachen GmbH |
+|  Copyright: | © 2015, Modell Aachen GmbH |
 |  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
-|  Release: | |
-|  Version: | |
+|  Release: | %$RELEASE% |
+|  Version: | %$VERSION% |
 |  Change History: | <!-- versions below in reverse order --> |
-|  Dependencies: | |
-|  Home page: | |
-|  Support: | |
-<!-- Do _not_ attempt to edit this topic; it is auto-generated. -->
-
+|  Dependencies: | MoreFormFieldsPlugin |
+|  Home: | http://www.modell-aachen.de |
