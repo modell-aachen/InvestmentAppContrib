@@ -1,3 +1,4 @@
 Foswiki::Plugins::MoreFormfieldsPlugin,>=0.01,perl,Required
 Foswiki::Plugins::JQSelect2Contrib,>=0.1,perl,Required
 Foswiki::Plugins::DnDUploadPlugin,>=1.0.0,perl,Required
+Foswiki::Plugins::RenderPlugin,>=3.3,perl,Required
