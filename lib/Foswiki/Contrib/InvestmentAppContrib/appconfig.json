@@ -1,0 +1,22 @@
+{
+    "appname": "InvestmentAppContrib",
+    "description": "%SHORTDESCRIPTION%",
+    "installname": "Investment",
+    "install": [
+        {
+            "MV": [
+                {"data/_apps/InvestmentApp": "data/%INSTALLNAME%"}
+            ]
+        },
+		{
+            "MV": [
+                {"data/_apps/InvestmentApp": "data/%INSTALLNAME%"}
+            ]
+        },
+		{
+            "MV": [
+                {"data/_apps/InvestmentApp": "data/%INSTALLNAME%"}
+            ]
+        }
+    ]
+}
