@@ -4,17 +4,8 @@
     "installname": "Investment",
     "install": [
         {
-            "MV": [
-                {"data/_apps/InvestmentApp": "data/%INSTALLNAME%"}
-            ]
-        },
-		{
-            "MV": [
-                {"data/_apps/InvestmentApp": "data/%INSTALLNAME%"}
-            ]
-        },
-		{
-            "MV": [
+            "move": [
+                {"data/_apps/InvestmentApp/WebLeftBarExample.txt": "data/Custom/WebLeftBarExample.txt"},
                 {"data/_apps/InvestmentApp": "data/%INSTALLNAME%"}
             ]
         }
