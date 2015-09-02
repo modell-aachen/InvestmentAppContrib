@@ -24,5 +24,6 @@ data/_apps/InvestmentApp/WebSearchAdvanced.txt 0644
 data/_apps/InvestmentApp/WebStatistics.txt 0644
 data/_apps/InvestmentApp/WebTopicList.txt 0644
 lib/Foswiki/Contrib/InvestmentAppContrib.pm 0644
+lib/Foswiki/Contrib/InvestmentAppContrib/appconfig.json 0644
 pub/System/InvestmentApp/investment.css 0644
 locale/InvestmentAppContrib/de.po 0644
