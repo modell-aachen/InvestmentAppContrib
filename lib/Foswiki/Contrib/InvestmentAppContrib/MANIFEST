@@ -27,3 +27,8 @@ lib/Foswiki/Contrib/InvestmentAppContrib.pm 0644
 lib/Foswiki/Contrib/InvestmentAppContrib/appconfig.json 0644
 pub/System/InvestmentApp/investment.css 0644
 locale/InvestmentAppContrib/de.po 0644
+locale/InvestmentAppContrib/cs.po 0644
+locale/InvestmentAppContrib/fr.po 0644
+locale/InvestmentAppContrib/hu.po 0644
+locale/InvestmentAppContrib/it.po 0644
+locale/InvestmentAppContrib/zh-cn.po 0644

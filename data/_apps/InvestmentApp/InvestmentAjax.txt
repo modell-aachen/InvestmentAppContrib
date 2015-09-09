@@ -8,21 +8,21 @@
 		<literal>
 	%ENDSECTION{"select2::user"}%
 	
-	%STARTSECTION{"select2::user::ldap"}%
-		<literal>
-			%LDAP{
-				urlparam="q"
-				urlparamfields="cn,uid"
-				urlparaminfix="on"
-				filter="objectClass=person"
-				header="{\"results\":["
-				format="{\"id\":\"$cn\",\"text\":\"$cn\"}"
-				footer="]}"
-				separator=","
-				limit="%URLPARAM{"limit" default="20"}%"
-				skip="%CALCULATE{"$EVAL(%URLPARAM{"limit" default="20"}%*(%URLPARAM{"page" default="1"}%-1))"}%"}%
-		</literal>
-	%ENDSECTION{"select2::user::ldap"}%
+%STARTSECTION{"select2::user::ldap"}%
+	<literal>
+		%LDAP{
+			urlparam="q"
+			urlparamfields="cn,uid"
+			urlparaminfix="on"
+			filter="objectClass=person"
+			header="{\"results\":["
+			format="{\"id\":\"$cn\",\"text\":\"$cn\"}"
+			footer="]}"
+			separator=","
+			limit="%URLPARAM{"limit" default="20"}%"
+			skip="%CALCULATE{"$EVAL(%URLPARAM{"limit" default="20"}%*(%URLPARAM{"page" default="1"}%-1))"}%"}%
+	</literal>
+%ENDSECTION{"select2::user::ldap"}%
 
 	%STARTSECTION{"select2::user::dbquery"}%
 		<literal>
