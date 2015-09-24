@@ -1,8 +1,8 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1437726692" format="1.1" reprev="9" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1443096690" format="1.1" reprev="9" version="8"}%
 | *Name* | *Type* | *Size* | *Values* | *Tooltip message* | *Attributes* |
 | Antragsteller | select2 | 50 | %SCRIPTURL{view}%/%WEB%/InvestmentAjax?contenttype=text/plain;skin=text;section=select2::user; | Name des Antragsstellers | M |
 | Antragsdatum | date | | %DATE% | Datum des Antrags | M |
-| Vorgesetzter | select2 | 50 | %SCRIPTURL{view}%/%WEB%/InvestmentAjax?contenttype=text/plain;skin=text;section=select2::fuehrung; | Name des Vorgesetzten | M |
+| Vorgesetzter | select2 | 50 | %SCRIPTURL{view}%/%WEB%/InvestmentAjax?contenttype=text/plain;skin=text;section=select2::user; | Name des Vorgesetzten | M |
 | Fachbereich | select+values | 1 | Hausmeister=%HAUSMEISTER%, IT=%IT%, Marketing=%MARKETING%, FuS=%FUS% | Name des Fachbereichs | M |
 | Produktbeschreibung | textarea | | | Beschreibung des Produkts | M |
 | Grund | text | 53 | | Beschaffungsgrund | M |
@@ -13,8 +13,9 @@
 | Miete | select+values | 1 | ja, nein | Miete/Leasing möglich? | |
 | Erstbeschaffung | select+values | 1 | ja, nein | Beschaffung erfolgt zum ersten Mal? | |
 | Anschaffungstermin | text | 53 | | Geplanter Fertigstellungs./Anschaffungstermin | |
-| Vergabehoehe | select+values | 1 | bis 1500&euro;=üblicher Preisvergleich, bis 5000&euro;=3 Angebote, über 5000&euro;=5 Angebote | Beschaffungsgrund | |
+| Vergabehoehe | select+values | 1 | bis 1500€=üblicher Preisvergleich, bis 5000€=3 Angebote, über 5000€=5 Angebote | Beschaffungsgrund | |
 | VergabeAbweichung | textarea | | | Begründung für evtl. Abweichung der Vergabe |
+| ManagementRequired | checkbox+values | 1 | Management Freigabe nicht notwendig=notrequired | Freigabe durch Vorstand nicht notwendig |
 
 %META:PREFERENCE{name="WORKFLOW" title="WORKFLOW" type="Set" value=""}%
 %META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="AdminUser"}%

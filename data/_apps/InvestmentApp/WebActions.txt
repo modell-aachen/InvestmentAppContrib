@@ -1,7 +1,6 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1436446396" format="1.1" version="8"}%
+%META:TOPICINFO{author="BaseUserMapping_333" date="1442922972" format="1.1" version="4"}%
 %META:TOPICPARENT{name="Templates"}%
-
-   * <a href="%SCRIPTURLPATH{"edit"}%/%BASEWEB%/InvestmentAUTOINC000?template=%WEB%.InvestmentEdit;templatetopic=%WEB%.InvestmentTemplate;formtemplate=InvestmentForm;t=%GMTIME{$epoch}%">%MAKETEXT{"New Investment Proposal"}%</a>
+   * <a href="%SCRIPTURLPATH{"edit"}%/%BASEWEB%/InvestmentAUTOINC000%GMTIME{"$year"}%?template=%WEB%.InvestmentEdit;templatetopic=%WEB%.InvestmentTemplate;formtemplate=InvestmentForm;Antragsteller=%WIKINAME%;t=%GMTIME{$epoch}%">%MAKETEXT{"New Investment Proposal"}%</a>
 
 %META:PREFERENCE{name="WORKFLOW" title="WORKFLOW" type="Set" value=""}%
 %META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="AdminUser"}%

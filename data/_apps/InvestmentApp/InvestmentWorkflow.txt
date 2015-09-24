@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1426694764" format="1.1" reprev="12" version="30"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1426694764" format="1.1" reprev="12" version="1"}%
 ---++ Defaults
 | *State type* | *Left tab* | *Right tab* | *Approved* |
 | approved | Approved Page | Discussion | 1 |
@@ -23,7 +23,7 @@
 ---++ Transitions
 %EDITTABLE{}%
 | *State* | *Action* | *Next State* | *Allowed* | *Notify* | *Condition* | *Warning* | *Attribute* | *Tasked* | *Task description* | *Due* |
-| NEW | Antrag Anlegen | ANTRAGSSTELLUNG | LOGGEDIN, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | NEW | | | |
+| NEW | Antrag Anlegen | ANTRAGSSTELLUNG | LOGGEDIN, KeyUserGroup | | | | NEW | | | |
 | ANTRAGSSTELLUNG | Antrag stellen | VORPRUEFUNG | %QUERY{fields[name="Antragsteller"].value}%, KeyUserGroup | %QUERY{fields[name="Vorgesetzter"].value}% | | | | | | |
 | ANTRAGSSTELLUNG | Antrag verwerfen | ABGELEHNT | %QUERY{fields[name="Antragsteller"].value}%, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | DISCARD | | | |
 | VORPRUEFUNG | An Fachbereich weitergeben | PREISERMITTLUNG | %QUERY{fields[name="Vorgesetzter"].value}%, KeyUserGroup | %QUERY{fields[name="Fachbereich"].value}% | | | ACCEPT | | Bitte ermitteln Sie den Warenpreis. | |
@@ -32,7 +32,8 @@
 | PREISERMITTLUNG | Antrag prüfen lassen | PRUEFUNG | %QUERY{fields[name="Fachbereich"].value}%, KeyUserGroup | %QUERY{fields[name="Vorgesetzter"].value}% | | | ACCEPT | | Bitte prüfen Sie den Investitionsantrag. | |
 | PREISERMITTLUNG | Um Überarbeitung bitten | ANTRAGSSTELLUNG | %QUERY{fields[name="Fachbereich"].value}%, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | REMARK | | Bitte überarbeiten Sie den Investitionsantrag. | |
 | PREISERMITTLUNG | Antrag ablehnen | ABGELEHNT | %QUERY{fields[name="Fachbereich"].value}%, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | REMARK | | | |
-| PRUEFUNG | Antrag freigeben lassen | FREIGABE | %QUERY{fields[name="Vorgesetzter"].value}%, KeyUserGroup | %VORSTAND% | | | ACCEPT | | Bitte Antrag freigeben. | |
+| PRUEFUNG | Antrag freigeben lassen | FREIGABE | %QUERY{fields[name="Vorgesetzter"].value}%, KeyUserGroup | %VORSTAND% | %IF{"'%QUERY{fields[name="ManagementRequired"].value}%'='notrequired'" then="off" else="on"}% | | ACCEPT | | Bitte Antrag freigeben. | |
+| PRUEFUNG | Antrag freigeben | BESTELLUNG  | %QUERY{fields[name="Vorgesetzter"].value}%, KeyUserGroup | %QUERY{fields[name="Fachbereich"].value}% | %IF{"'%QUERY{fields[name="ManagementRequired"].value}%'='notrequired'" then="on" else="off"}% | | ACCEPT | | Bitte Antrag freigeben. | |
 | PRUEFUNG | Um Überarbeitung bitten | PREISERMITTLUNG | %QUERY{fields[name="Vorgesetzter"].value}%, KeyUserGroup | %QUERY{fields[name="Fachbereich"].value}% | | | REMARK | | Bitte überarbeiten Sie den Investitionsantrag. | |
 | PRUEFUNG | Antrag ablehnen | ABGELEHNT | %QUERY{fields[name="Vorgesetzter"].value}%, KeyUserGroup | %QUERY{fields[name="Antragsteller"].value}% | | | REMARK | | | |
 | FREIGABE | Antrag freigeben | BESTELLUNG | %VORSTAND%, KeyUserGroup | %QUERY{fields[name="Fachbereich"].value}% | | | ACCEPT | | Bitte Bestellung beauftragen. | |
@@ -47,6 +48,6 @@
  * Set VIEW_TEMPLATE = WorkflowView
  * Set ALLOWTOPICCHANGE = AdminGroup
 
+
 %META:PREFERENCE{name="WORKFLOW" title="WORKFLOW" type="Set" value=""}%
 %META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="AdminUser"}%
-

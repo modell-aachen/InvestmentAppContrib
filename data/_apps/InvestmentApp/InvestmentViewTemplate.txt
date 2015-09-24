@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="GiselaGeheim" comment="reprev" date="1439310554" format="1.1" reprev="2" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1442913970" format="1.1" reprev="2" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
 %TMPL:INCLUDE{"view"}%
 
@@ -15,50 +15,60 @@
 
 %TMPL:DEF{"ANTRAGSSTELLUNG"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="addManagementRequireBoxView"}%
 %TMPL:END%
 
 %TMPL:DEF{"VORPRUEFUNG"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="addManagementRequireBoxView"}%
 %TMPL:END%
 
 %TMPL:DEF{"PREISERMITTLUNG"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="addManagementRequireBoxView"}%
 %TMPL:END%
 
 %TMPL:DEF{"PRUEFUNG"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="addManagementRequireBoxView"}%
 %TMPL:END%
 
 %TMPL:DEF{"FREIGABE"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="addManagementRequireBoxView"}%
 %TMPL:END%
 
 %TMPL:DEF{"BESTELLUNG"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="addManagementRequireBoxView"}%
 %TMPL:END%
 
 %TMPL:DEF{"WARENANNAHME"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="addManagementRequireBoxView"}%
 %TMPL:END%
 
 %TMPL:DEF{"UEBERGABE"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="addManagementRequireBoxView"}%
 %TMPL:END%
 
 %TMPL:DEF{"ABGELEHNT"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="addManagementRequireBoxView"}%
 %TMPL:END%
 
 %TMPL:DEF{"ABGESCHLOSSEN"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_1_view"}%
 %INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="freigabe_section_2_view"}%
+%INCLUDE{"%WEB%/InvestmentAuthorisationTemplates" section="addManagementRequireBoxView"}%
 %TMPL:END%
 
 %TMPL:END%

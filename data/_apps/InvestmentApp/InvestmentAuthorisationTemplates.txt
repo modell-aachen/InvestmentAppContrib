@@ -1,4 +1,19 @@
-%META:TOPICINFO{author="KevinAlleine" comment="pending" date="1439367522" format="1.1" version="6"}%
+%META:TOPICINFO{author="KevinAlleine" comment="pending" date="1439367522" format="1.1" version="1"}%
+
+%STARTSECTION{name="addManagementRequireBox"}%
+    <tr>
+		<td>&nbsp;</td>
+		<td>%RENDERFOREDIT{"%WEB%/%BASETOPIC%" fields="ManagementRequired" format="$edit"}%</td>
+	</tr>			
+%ENDSECTION{name="addManagementRequireBox"}%
+
+%STARTSECTION{name="addManagementRequireBoxView"}%
+    <tr>
+		<td>&nbsp;</td>
+		<td>%RENDERFORDISPLAY{"%WEB%/%BASETOPIC%" fields="ManagementRequired" format="$value"}%</td>
+	</tr>
+%ENDSECTION{name="addManagementRequireBoxView"}%
+
 %STARTSECTION{name="freigabe_section_1_edit"}%
 	<tr>
 		<td>%MAKETEXT{"Requester"}% %RED%*%ENDCOLOR%</td>

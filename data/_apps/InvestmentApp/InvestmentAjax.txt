@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="pending" date="1427369215" format="1.1" version="24"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="pending" date="1443096083" format="1.1" version="27"}%
 <verbatim>
 	%STARTSECTION{"select2::user"}%
 		<literal>
@@ -9,19 +9,16 @@
 	%ENDSECTION{"select2::user"}%
 	
 %STARTSECTION{"select2::user::ldap"}%
-	<literal>
-		%LDAP{
-			urlparam="q"
-			urlparamfields="cn,uid"
-			urlparaminfix="on"
-			filter="objectClass=person"
-			header="{\"results\":["
-			format="{\"id\":\"$cn\",\"text\":\"$cn\"}"
-			footer="]}"
-			separator=","
-			limit="%URLPARAM{"limit" default="20"}%"
-			skip="%CALCULATE{"$EVAL(%URLPARAM{"limit" default="20"}%*(%URLPARAM{"page" default="1"}%-1))"}%"}%
-	</literal>
+<literal>
+%LDAPUSERS{
+  include="%URLPARAM{"q"}%.*"
+  hideunknown="off"
+  casesensitive="off"
+  header="{\"results\":["
+  format="{\"id\":\"$wikiName\",\"text\":\"$wikiName\"}"
+  footer="]}"
+  sep=","
+  limit="%URLPARAM{"limit" default="20"}%"}%</literal>
 %ENDSECTION{"select2::user::ldap"}%
 
 	%STARTSECTION{"select2::user::dbquery"}%
@@ -54,7 +51,7 @@
 	
 	%STARTSECTION{"select2::fuehrung"}%
 		<literal>
-			%FORMATLIST{"$percentGROUPINFO{\"FuehrungkraefteGroup\"}$percent" 
+			%FORMATLIST{"$percentGROUPINFO{\"Fk\"}$percent" 
 				pattern="(?:Main\.)?(.*)"
 				header="{\"results\":["
 				format="{\"id\":\"$1\", \"text\":\"$1\"}"
@@ -64,6 +61,6 @@
 
 </verbatim>
 
+
 %META:PREFERENCE{name="WORKFLOW" title="WORKFLOW" type="Set" value=""}%
 %META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="AdminUser"}%
-
